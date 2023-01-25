@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 from filter_by_year_and_quarter import filter_by_year_and_quarter
 
