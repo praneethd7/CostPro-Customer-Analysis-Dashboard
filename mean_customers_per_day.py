@@ -14,4 +14,4 @@ def mean_customers_per_day(data: pd.DataFrame, year: int, quarter: int) -> float
     data = filter_by_year_and_quarter(data, year, quarter)
 
     # Calculate the mean number of customers per day
-    return mean_customers_per_day(data, year, quarter)
+    return data.groupby(['Month','Day']).nunique()['CustomerID'].mean()
